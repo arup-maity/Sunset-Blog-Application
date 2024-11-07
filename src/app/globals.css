@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+   font-family: var(--red-hat-display);
+}
+
+@layer base {
+   :root {
+      --radius: 0.5rem;
+   }
+}
+
+.admin-sidebar {
+   block-size: 100%;
+   inline-size: 256px;
+   inset-block-start: 0;
+   transition: transform 0.3s ease-in-out, inline-size 0.3s ease-in-out;
+   will-change: transform, inline-size;
 }
