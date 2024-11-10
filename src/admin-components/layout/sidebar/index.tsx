@@ -1,12 +1,20 @@
-import React from 'react'
-import SidebarMenu from './SidebarMenu'
+import {
+   Sidebar,
+   SidebarContent,
+   SidebarFooter,
+   SidebarGroup,
+   SidebarHeader,
+} from "@/components/ui/sidebar"
+import SidebarMenu from "./SidebarMenu"
 
-const AdminSidebar = () => {
+export function AppSidebar() {
    return (
-      <div className='admin-sidebar fixed start-0 bg-[#0c0c0c] dark:bg-[#1A1A1B] transition-all duration-400 ease-in-out z-20'>
-         <SidebarMenu />
-      </div>
+      <Sidebar className="bg-black">
+         {/* <SidebarHeader /> */}
+         <SidebarContent>
+            <SidebarMenu />
+         </SidebarContent>
+         {/* <SidebarFooter /> */}
+      </Sidebar>
    )
 }
-
-export default AdminSidebar
